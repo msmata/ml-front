@@ -1,7 +1,11 @@
 import { SearchBox } from '../components/SearchBox';
 
-export const SearchBoxView = () => {
+interface SearchBoxViewProps {
+    onClickSearch: () => void;
+}
+
+export const SearchBoxView = ({onClickSearch}: SearchBoxViewProps) => {
     return (
-        <SearchBox />
+        <SearchBox onClickSearch={onClickSearch} />
     );
 }
