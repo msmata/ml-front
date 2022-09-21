@@ -1,0 +1,10 @@
+.imageContainer {
+    width: 180px;
+    height: 180px;
+    border-radius: 4px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
