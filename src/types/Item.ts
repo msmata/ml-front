@@ -7,4 +7,5 @@ export type Item = {
 	picture: string;
 	condition: string;
 	free_shipping: boolean;
+	location: string;
 };
