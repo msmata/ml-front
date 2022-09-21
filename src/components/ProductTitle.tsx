@@ -4,6 +4,6 @@ interface ProductTitleProps {
 
 export const ProductTitle = ({title}: ProductTitleProps) => {
     return (
-        <span>{title}</span>
+        <div>{title}</div>
     );
 }
