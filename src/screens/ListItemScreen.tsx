@@ -11,6 +11,7 @@ export const ListItemScreen = () => {
     const searchQuery = searchParams.get('search') || '';
     const {listItems, loadingItems} = useItems();
     const [items, setItems] = useState<Item[]>([]);
+    const [searchItem, setSearchItem] = useState('');
 
     useEffect(() => {
         const loadingData = async () => {
@@ -22,8 +23,14 @@ export const ListItemScreen = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    const handleClickSearch = useCallback(() => {}, []);
-    const handleSearchProductChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {}, []);
+    const handleClickSearch = useCallback(async () => {
+        const data:ItemResponse = await listItems(searchItem);
+        setItems(data.items);
+    }, [listItems, searchItem]);
+
+    const handleSearchProductChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchItem(event.target.value);
+    }, []);
 
     return (
         <ListItemView onClickSearch={handleClickSearch} onSearchProductChange={handleSearchProductChange} items={items} />
