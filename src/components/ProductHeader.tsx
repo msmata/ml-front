@@ -22,7 +22,7 @@ export const ProductHeader = ({item}: ProductHeaderProps) => {
                     </div>
                     <div className="col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
                     <div className="col-sm-1 col-md-1 col-lg-1 col-xl-1">
-                        <div>{item.location}</div>
+                        <div className="location">{item.location}</div>
                     </div>
                     <div className="col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
                 </div>

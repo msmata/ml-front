@@ -2,3 +2,8 @@
     display: flex;
     flex-direction: row;
 }
+
+.location {
+    font-size: 12px;
+    margin-top: 15px;
+}
