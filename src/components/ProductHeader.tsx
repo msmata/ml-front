@@ -6,11 +6,12 @@ import { ProductPrice } from "./ProductPrice";
 
 interface ProductHeaderProps {
     item: Item;
+    onSelect: React.MouseEventHandler<HTMLDivElement>;
 }
 
-export const ProductHeader = ({item}: ProductHeaderProps) => {
+export const ProductHeader = ({item, onSelect}: ProductHeaderProps) => {
     return (
-            <div className="row">
+            <div className="row" onClick={onSelect}>
                 <div className="col-sm-12 col-md-12 col-lg-12 col-xl-12" style={{display: "flex", flexDirection: 'row', margin: 16}}>
                     <div className="col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
                     <div className="col-sm-2 col-md-2 col-lg-2 col-xl-2">
