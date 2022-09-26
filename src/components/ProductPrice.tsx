@@ -7,12 +7,12 @@ interface ProductPriceProps {
 
 export const ProductPrice = ({price}: ProductPriceProps) => {
 
-    const formatPrice = (price: Price) => {
-        const prefix = price.currency === 'ARS' ? '$ ': 'U$S';
-        if (price.decimals) {
-            return prefix + price.amount + '.' + price.decimals;
+    const formatPrice = (priceToFormat: Price) => {
+        const prefix = priceToFormat.currency === 'ARS' ? '$ ': 'U$S';
+        if (priceToFormat.decimals) {
+            return prefix + priceToFormat.amount + '.' + priceToFormat.decimals;
         } else {
-            return prefix + price.amount;
+            return prefix + priceToFormat.amount;
         }
     }
 

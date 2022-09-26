@@ -9,7 +9,7 @@ export const ListItemScreen = () => {
 
     const [searchParams] = useSearchParams();
     const searchQuery = searchParams.get('search') || '';
-    const {listItems, loadingItems} = useItems();
+    const { listItems } = useItems();
     const [items, setItems] = useState<Item[]>([]);
     const [searchItem, setSearchItem] = useState('');
     const navigate = useNavigate();

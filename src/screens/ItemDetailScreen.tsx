@@ -8,7 +8,7 @@ import { ItemDetailView } from "../views/ItemDetailView";
 export const ItemDetailScreen = () => {
 
     const { id } = useParams();
-    const { getItemDetail, loadingItems} = useItems();
+    const { getItemDetail } = useItems();
     const [item, setItem] = useState<SingleItem>();
 
     useEffect(() => {

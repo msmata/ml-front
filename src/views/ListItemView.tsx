@@ -1,4 +1,3 @@
-import { ChangeEvent } from "react";
 import { ProductHeader } from "../components/ProductHeader";
 import { SearchBox } from "../components/SearchBox";
 import { Item } from "../types/Item";
