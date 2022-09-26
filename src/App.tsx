@@ -1,4 +1,5 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { ItemDetailScreen } from './screens/ItemDetailScreen';
 import { ListItemScreen } from './screens/ListItemScreen';
 import { SearchBoxScreen } from "./screens/SearchBoxScreen"
 
@@ -8,6 +9,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<SearchBoxScreen />} />
         <Route path="/items" element={<ListItemScreen />} />
+        <Route path="/items/:id" element={<ItemDetailScreen />} />
       </Routes>
     </BrowserRouter>
   );

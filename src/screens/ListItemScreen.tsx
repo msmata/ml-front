@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
-import {useSearchParams} from 'react-router-dom';
+import {useNavigate, useSearchParams} from 'react-router-dom';
+import { InternalError } from '../components/InternalError';
 import { useItems } from '../hooks/useItems';
 import { Item } from '../types/Item';
 import { ItemResponse } from '../types/ItemResponse';
@@ -9,9 +10,10 @@ export const ListItemScreen = () => {
 
     const [searchParams] = useSearchParams();
     const searchQuery = searchParams.get('search') || '';
-    const {listItems, loadingItems} = useItems();
+    const { listItems, errorLoadingItems } = useItems();
     const [items, setItems] = useState<Item[]>([]);
     const [searchItem, setSearchItem] = useState('');
+    const navigate = useNavigate();
 
     useEffect(() => {
         const loadingData = async () => {
@@ -32,7 +34,15 @@ export const ListItemScreen = () => {
         setSearchItem(event.target.value);
     }, []);
 
+    const handleItemSelect = useCallback((itemId: string) => {
+        navigate(`/items/${itemId}`);
+    }, [navigate]);
+
+    if (errorLoadingItems) {
+        return <InternalError />;
+    }
+
     return (
-        <ListItemView onClickSearch={handleClickSearch} onSearchProductChange={handleSearchProductChange} items={items} />
+        <ListItemView onClickSearch={handleClickSearch} onSearchProductChange={handleSearchProductChange} onItemSelect={handleItemSelect} items={items} />
     );
 }
