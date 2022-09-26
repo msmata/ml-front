@@ -1,4 +1,5 @@
 import { SingleItem } from "../types/SingleItem";
+import './ItemDetailView.css';
 
 interface ItemDetailViewProps {
     item: SingleItem
@@ -14,15 +15,24 @@ export const ItemDetailView = ({item}: ItemDetailViewProps) => {
                         <img src={item.picture} className="imageDetail" alt="imagen del producto" />
                     </div>
                     <div className="col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                        <div>{item.condition} - {item.sold_quantity} vendidos</div>
-                        <div>{item.title}</div>
-                        <div>$ {item.price.amount}</div>
+                        <div className="condition">{item.condition} - {item.sold_quantity} vendidos</div>
+                        <div className="title">{item.title}</div>
+                        <div className="amount">$ {item.price.amount}</div>
                     </div>
                 </div>
             </div>
             <div className="row">
-                <span>Descripcion del producto</span>
-                <span>{item.description}</span>
+                <div className="col-sm-1 col-md-1 col-lg-1 col-xl-1">&nbsp;</div>
+            </div>
+            <div className="row">
+                <div className="col-sm-12 col-md-12 col-lg-12 col-xl-12" style={{display: "flex", flexDirection: 'row', margin: 16}}>
+                    <div className="col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
+                    <div className="col-sm-7 col-md-7 col-lg-7 col-xl-7 description">
+                        <div className="descriptionLabel">Descripcion del producto</div>
+                        <div className="descriptionText">{item.description}</div>
+                    </div>
+                    <div className="col-sm-4 col-md-4 col-lg-4 col-xl-4"></div>
+                </div>
             </div>
         </div>
     );
