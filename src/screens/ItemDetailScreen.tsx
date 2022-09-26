@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { InternalError } from "../components/InternalError";
 import { useItems } from "../hooks/useItems";
 import { SingleItem } from "../types/SingleItem";
 import { SingleItemResponse } from "../types/SingleItemResponse";
@@ -26,6 +27,6 @@ export const ItemDetailScreen = () => {
             <ItemDetailView item={item} />
         );
     } else {
-        return <span>Error en consulta de item</span>
+        return <InternalError />
     }
 };
