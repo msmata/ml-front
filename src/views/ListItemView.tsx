@@ -1,3 +1,4 @@
+import { CategoryWrapper } from "../components/CategoryWrapper";
 import { ProductHeader } from "../components/ProductHeader";
 import { SearchBox } from "../components/SearchBox";
 import { Item } from "../types/Item";
@@ -13,9 +14,11 @@ export const ListItemView = ({items, onClickSearch, onSearchProductChange, onIte
     return (
         <>
             <SearchBox onClickSearch={onClickSearch} onSearchProductChange={onSearchProductChange} />
-            {items.map(item => {
-                return <ProductHeader key={item.id} item={item} onSelect={() => onItemSelect(item.id)} />;
-            })}
+            <CategoryWrapper>
+                {items.map(item => {
+                    return <ProductHeader key={item.id} item={item} onSelect={() => onItemSelect(item.id)} />;
+                })}
+            </CategoryWrapper>
         </>
     );
 }
