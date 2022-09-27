@@ -12,6 +12,7 @@ export const ListItemScreen = () => {
     const searchQuery = searchParams.get('search') || '';
     const { listItems, errorLoadingItems } = useItems();
     const [items, setItems] = useState<Item[]>([]);
+    const  [breadcrumb, setBreadcrumb] = useState('');
     const [searchItem, setSearchItem] = useState('');
     const navigate = useNavigate();
 
@@ -19,6 +20,7 @@ export const ListItemScreen = () => {
         const loadingData = async () => {
             const data:ItemResponse = await listItems(searchQuery);
             setItems(data.items);
+            setBreadcrumb(data.breadcrumb);
         };
 
         loadingData();
@@ -28,6 +30,7 @@ export const ListItemScreen = () => {
     const handleClickSearch = useCallback(async () => {
         const data:ItemResponse = await listItems(searchItem);
         setItems(data.items);
+        setBreadcrumb(data.breadcrumb);
     }, [listItems, searchItem]);
 
     const handleSearchProductChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
@@ -43,6 +46,6 @@ export const ListItemScreen = () => {
     }
 
     return (
-        <ListItemView onClickSearch={handleClickSearch} onSearchProductChange={handleSearchProductChange} onItemSelect={handleItemSelect} items={items} />
+        <ListItemView onClickSearch={handleClickSearch} onSearchProductChange={handleSearchProductChange} onItemSelect={handleItemSelect} items={items} breadcrumb={breadcrumb} />
     );
 }
