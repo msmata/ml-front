@@ -11,11 +11,13 @@ export const ItemDetailScreen = () => {
     const { id } = useParams();
     const { getItemDetail } = useItems();
     const [item, setItem] = useState<SingleItem>();
+    const [breadcrumb, setBreadcrumb] = useState('');
 
     useEffect(() => {
         const loadingData = async () => {
             const data:SingleItemResponse = await getItemDetail(id || '');
             setItem(data.item);
+            setBreadcrumb(data.breadcrumb);
         };
 
         loadingData();
@@ -24,7 +26,7 @@ export const ItemDetailScreen = () => {
 
     if (item) {
         return (
-            <ItemDetailView item={item} />
+            <ItemDetailView item={item} breadcrumb={breadcrumb} />
         );
     } else {
         return <InternalError />

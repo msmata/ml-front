@@ -4,14 +4,15 @@ import { SingleItem } from "../types/SingleItem";
 import './ItemDetailView.css';
 
 interface ItemDetailViewProps {
-    item: SingleItem
+    item: SingleItem,
+    breadcrumb: string
 }
 
-export const ItemDetailView = ({item}: ItemDetailViewProps) => {
+export const ItemDetailView = ({item, breadcrumb}: ItemDetailViewProps) => {
     return (
         <>
             <SearchBox onClickSearch={() => {}} onSearchProductChange={() => {}} />
-            <CategoryWrapper>
+            <CategoryWrapper breadcrumb={breadcrumb}>
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-sm-12 col-md-12 col-lg-12 col-xl-12" style={{display: "flex", flexDirection: 'row', margin: 16}}>
