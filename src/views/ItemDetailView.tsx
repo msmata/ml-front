@@ -1,6 +1,7 @@
 import { CategoryWrapper } from "../components/CategoryWrapper";
 import { SearchBox } from "../components/SearchBox";
 import { SingleItem } from "../types/SingleItem";
+import { formatPrice } from "../utils/amountFormatter";
 import './ItemDetailView.css';
 
 interface ItemDetailViewProps {
@@ -23,7 +24,7 @@ export const ItemDetailView = ({item, breadcrumb}: ItemDetailViewProps) => {
                             <div className="col-sm-4 col-md-4 col-lg-4 col-xl-4">
                                 <div className="condition">{item.condition} - {item.sold_quantity} vendidos</div>
                                 <div className="title">{item.title}</div>
-                                <div className="amount">$ {item.price.amount}</div>
+                                <div className="amount">{formatPrice(item.price)}</div>
                             </div>
                         </div>
                     </div>
