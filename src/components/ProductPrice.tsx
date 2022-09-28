@@ -10,9 +10,9 @@ export const ProductPrice = ({price}: ProductPriceProps) => {
     const formatPrice = (priceToFormat: Price) => {
         const prefix = priceToFormat.currency === 'ARS' ? '$ ': 'U$S';
         if (priceToFormat.decimals) {
-            return prefix + priceToFormat.amount + '.' + priceToFormat.decimals;
+            return prefix + priceToFormat.amount.toLocaleString() + ',' + priceToFormat.decimals.toString().padEnd(2, '0');
         } else {
-            return prefix + priceToFormat.amount;
+            return prefix + priceToFormat.amount.toLocaleString();
         }
     }
 
