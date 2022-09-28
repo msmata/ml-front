@@ -12,7 +12,7 @@ export const SearchBox = ({searchProduct, onClickSearch, onSearchProductChange}:
             <div className="row">
                 <div className="col-sm-12 col-md-12 col-lg-12 col-xl-12 contenedorPrincipal">
                     <div className="col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
-                    <div className="col-sm-1 col-md-1 col-lg-1 col-xl-1" style={{display: 'flex', flexDirection: 'row-reverse', marginRight: 10}}>
+                    <div className="col-sm-1 col-md-1 col-lg-1 col-xl-1 d-flex flex-row-reverse px-3">
                         <img src="/assets/Logo_ML.png" alt="Mercadolibre logo" />
                     </div>
                     <div className="col-sm-9 col-md-9 col-lg-9 col-xl-9 contenedorCajaBusqueda">
