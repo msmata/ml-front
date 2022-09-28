@@ -5,14 +5,17 @@ import { formatPrice } from "../utils/amountFormatter";
 import './ItemDetailView.css';
 
 interface ItemDetailViewProps {
-    item: SingleItem,
-    breadcrumb: string
+    item: SingleItem;
+    breadcrumb: string;
+    searchProduct: string;
+    onSearchClick: () => void;
+    onSearchProductChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const ItemDetailView = ({item, breadcrumb}: ItemDetailViewProps) => {
+export const ItemDetailView = ({item, breadcrumb, searchProduct, onSearchClick, onSearchProductChange}: ItemDetailViewProps) => {
     return (
         <>
-            <SearchBox onClickSearch={() => {}} onSearchProductChange={() => {}} />
+            <SearchBox onClickSearch={onSearchClick} onSearchProductChange={onSearchProductChange} searchProduct={searchProduct} />
             <CategoryWrapper breadcrumb={breadcrumb}>
                 <div className="container-fluid">
                     <div className="row">

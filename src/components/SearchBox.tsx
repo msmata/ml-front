@@ -1,11 +1,12 @@
 import './searchBoxView.css';
 
 interface SearchBoxProps {
+    searchProduct: string;
     onClickSearch: () => void;
     onSearchProductChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const SearchBox = ({onClickSearch, onSearchProductChange}: SearchBoxProps) => {
+export const SearchBox = ({searchProduct, onClickSearch, onSearchProductChange}: SearchBoxProps) => {
     return (
         <div className="container-fluid">
             <div className="row">
@@ -15,7 +16,7 @@ export const SearchBox = ({onClickSearch, onSearchProductChange}: SearchBoxProps
                         <img src="/assets/Logo_ML.png" alt="Mercadolibre logo" />
                     </div>
                     <div className="col-sm-9 col-md-9 col-lg-9 col-xl-9 contenedorCajaBusqueda">
-                        <input type="text" placeholder="Nunca dejes de buscar" style={{width: '100%'}} onChange={onSearchProductChange} />
+                        <input type="text" placeholder="Nunca dejes de buscar" style={{width: '100%'}} onChange={onSearchProductChange} value={searchProduct} />
                         <div className="botonBuscar">
                             <img src="/assets/ic_Search.png" alt="Buscar" onClick={onClickSearch} />
                         </div>

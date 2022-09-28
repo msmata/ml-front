@@ -13,7 +13,7 @@ export const ListItemScreen = () => {
     const { listItems, errorLoadingItems } = useItems();
     const [items, setItems] = useState<Item[]>([]);
     const  [breadcrumb, setBreadcrumb] = useState('');
-    const [searchItem, setSearchItem] = useState('');
+    const [searchProduct, setSearchProduct] = useState('');
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -22,19 +22,19 @@ export const ListItemScreen = () => {
             setItems(data.items);
             setBreadcrumb(data.breadcrumb);
         };
-
+        setSearchProduct(searchQuery);
         loadingData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const handleClickSearch = useCallback(async () => {
-        const data:ItemResponse = await listItems(searchItem);
+        const data:ItemResponse = await listItems(searchProduct);
         setItems(data.items);
         setBreadcrumb(data.breadcrumb);
-    }, [listItems, searchItem]);
+    }, [listItems, searchProduct]);
 
     const handleSearchProductChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
-        setSearchItem(event.target.value);
+        setSearchProduct(event.target.value);
     }, []);
 
     const handleItemSelect = useCallback((itemId: string) => {
@@ -46,6 +46,6 @@ export const ListItemScreen = () => {
     }
 
     return (
-        <ListItemView onClickSearch={handleClickSearch} onSearchProductChange={handleSearchProductChange} onItemSelect={handleItemSelect} items={items} breadcrumb={breadcrumb} />
+        <ListItemView onClickSearch={handleClickSearch} onSearchProductChange={handleSearchProductChange} onItemSelect={handleItemSelect} items={items} breadcrumb={breadcrumb} searchProduct={searchProduct} />
     );
 }

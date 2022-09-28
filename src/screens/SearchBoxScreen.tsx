@@ -20,6 +20,6 @@ export const SearchBoxScreen = () => {
     }, [navigate, searchProduct]);
 
     return (
-        <SearchBoxView onClickSearch={handleSearchClick} onSearchProductChange={handleSearchProductChange} />
+        <SearchBoxView onClickSearch={handleSearchClick} onSearchProductChange={handleSearchProductChange} searchProduct={searchProduct} />
     );
 }
