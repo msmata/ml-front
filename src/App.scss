@@ -118,3 +118,46 @@
     height: auto;
     border-radius: $xxxs;
 }
+//Product detail
+.productDetailContainer {
+    display: flex;
+}
+
+.imageProductDetail {
+    width: $xxxl;
+    height: auto;
+}
+
+.condition {
+    margin-top: $m-l;
+    font-size: $xs;
+}
+
+.title {
+    margin-top: $s;
+    font-weight: bold;
+    font-size: $m;
+}
+
+.amount {
+    margin-top: $m-l;
+    margin-bottom: $m-l;
+    font-weight: bold;
+    font-size: $l;
+}
+
+.descriptionContainer {
+    margin-left: $m-l;
+    margin-top: $m-l;
+    width: $xxxl;
+}
+
+.descriptionLabel {
+    margin-bottom: $m-l;
+    font-weight: bold;
+    font-size: $fontM;
+}
+
+.descriptionText {
+    font-size: $s;
+}
