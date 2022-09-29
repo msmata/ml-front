@@ -1,5 +1,6 @@
 @import './styles/variables';
 
+//SearchBox
 .searchboxContainer {
     background-color: $yellow;
     width: 100%;
@@ -44,4 +45,26 @@
     img {
         width: 85%;
     }
+}
+
+//ListItem
+.categoryWrapperContainer {
+    background-color: $light-grey;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.categoryWrapperBreadcrumbContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    width: 83%;
+    margin-top: $s;
+}
+
+.breadcrumbText {
+    font-size: $xs;
 }
