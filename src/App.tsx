@@ -2,6 +2,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import { ItemDetailScreen } from './screens/ItemDetailScreen';
 import { ListItemScreen } from './screens/ListItemScreen';
 import { SearchBoxScreen } from "./screens/SearchBoxScreen"
+import './App.scss';
 
 const App = () => {
   return (

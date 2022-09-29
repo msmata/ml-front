@@ -1,5 +1,3 @@
-import "./ProductImage.css";
-
 interface ProductImageProps {
     image: string;
 }
