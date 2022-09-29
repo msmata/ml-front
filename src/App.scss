@@ -105,3 +105,15 @@
 .productLocationSeparator {
     width: 66%;
 }
+
+.imageContainer {
+    width: $xxl;
+    height: $xxl;
+    border-radius: $xxxs;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: $xxxs;
+}
