@@ -1,0 +1,163 @@
+@import './styles/variables';
+
+//SearchBox
+.searchboxContainer {
+    background-color: $yellow;
+    width: 100%;
+    height: $l;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $xxxs;
+}
+
+.searchboxContentContainer {
+    display: flex;
+    width: 83%;
+    input {
+        border: none;
+        border-radius: none;
+        border-top-left-radius: $xxxs;
+        border-bottom-left-radius: $xxxs;
+        padding-left: $xxs;
+        font-size: $s-m;
+    }
+}
+
+.logoContainer {
+    width: $l;
+    margin-right: $xs;
+    display: flex;
+    align-items: center;
+    img {
+        width: 100%;
+    }
+}
+
+.searchButton {
+    border: none;
+    border-top-right-radius: $xxxs;
+    border-bottom-right-radius: $xxxs;
+    background-color: $light-grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+        width: 85%;
+    }
+}
+
+//ListItem
+.categoryWrapperContainer {
+    background-color: $light-grey;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 5%;
+}
+
+.categoryWrapperBreadcrumbContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    width: 83%;
+}
+
+.breadcrumbText {
+    font-size: $xs;
+    padding-top: $s;
+    padding-bottom: $s;
+}
+
+.childrenContainer {
+    width: 100%;
+    background-color: $white;
+}
+//Product Header
+.productHeaderContainer {
+    background-color: $white;
+    width: 83%;
+    padding: $s;
+    display: flex;
+}
+
+.productInfoContainer {
+    width: 33%;
+}
+
+.productTitle {
+    font-size: 18px;
+}
+
+.productPrice {
+    padding-top: $s;
+    font-size: $m;
+    font-weight: bold;
+    margin-bottom: $m-l;
+}
+
+.productLocation {
+    font-size: $xxs;
+    margin-top: 15px;
+}
+
+.productLocationSeparator {
+    width: 66%;
+}
+
+.imageContainer {
+    width: $xxl;
+    height: $xxl;
+    border-radius: $xxxs;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: $xxxs;
+}
+//Product detail
+.productDetailContainer {
+    display: flex;
+}
+
+.imageProductDetail {
+    width: $xxxl;
+    height: auto;
+}
+
+.condition {
+    margin-top: $m-l;
+    font-size: $xs;
+}
+
+.title {
+    margin-top: $s;
+    font-weight: bold;
+    font-size: $m;
+}
+
+.amount {
+    margin-top: $m-l;
+    margin-bottom: $m-l;
+    font-weight: bold;
+    font-size: $l;
+}
+
+.descriptionContainer {
+    margin-left: $m-l;
+    margin-top: $m-l;
+    width: $xxxl;
+}
+
+.descriptionLabel {
+    margin-bottom: $m-l;
+    font-weight: bold;
+    font-size: $fontM;
+}
+
+.descriptionText {
+    font-size: $s;
+}
