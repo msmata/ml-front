@@ -1,0 +1,47 @@
+@import './styles/variables';
+
+.searchboxContainer {
+    background-color: $yellow;
+    width: 100%;
+    height: $l;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $xxxs;
+}
+
+.searchboxContentContainer {
+    display: flex;
+    width: calc(10 * $xl + 9 * $s);
+    input {
+        border: none;
+        border-radius: none;
+        border-top-left-radius: $xxxs;
+        border-bottom-left-radius: $xxxs;
+        padding-left: $xxs;
+        font-size: $s-m;
+    }
+}
+
+.logoContainer {
+    width: $l;
+    margin-right: $xs;
+    display: flex;
+    align-items: center;
+    img {
+        width: 100%;
+    }
+}
+
+.searchButton {
+    border: none;
+    border-top-right-radius: $xxxs;
+    border-bottom-right-radius: $xxxs;
+    background-color: $light-grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+        width: 85%;
+    }
+}
