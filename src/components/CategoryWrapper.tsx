@@ -8,7 +8,7 @@ export const CategoryWrapper = ({children, breadcrumb}: CategoryWrapperProps) =>
         <div className="categoryWrapperContainer">
             <div className="categoryWrapperBreadcrumbContainer">
                 <span className="breadcrumbText">{breadcrumb}</span>
-                <div>
+                <div className="childrenContainer">
                     {children}
                 </div>
             </div>

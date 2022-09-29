@@ -55,6 +55,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    padding-bottom: 5%;
 }
 
 .categoryWrapperBreadcrumbContainer {
@@ -67,4 +68,40 @@
 
 .breadcrumbText {
     font-size: $xs;
+}
+
+.childrenContainer {
+    width: 100%;
+    background-color: $white;
+}
+//Product Header
+.productHeaderContainer {
+    background-color: $white;
+    width: 83%;
+    padding: $s;
+    display: flex;
+}
+
+.productInfoContainer {
+    width: 33%;
+}
+
+.productTitle {
+    font-size: 18px;
+}
+
+.productPrice {
+    padding-top: $s;
+    font-size: $m;
+    font-weight: bold;
+    margin-bottom: $m-l;
+}
+
+.productLocation {
+    font-size: $xxs;
+    margin-top: 15px;
+}
+
+.productLocationSeparator {
+    width: 66%;
 }
