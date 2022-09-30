@@ -26,7 +26,6 @@ export const SearchBox = ({searchProduct, onClickSearch, onSearchProductChange}:
                     style={{width: '100%'}}
                     onChange={onSearchProductChange}
                     value={searchProduct}
-                    // onKeyDown={e => e.key === 'Enter' && onClickSearch}
                     onKeyDown={handleKeyDown}
                 />
                 <button onClick={onClickSearch} className="searchButton">
