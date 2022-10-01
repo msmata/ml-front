@@ -1,5 +1,3 @@
-// import './searchBoxView.css';
-
 interface SearchBoxProps {
     searchProduct: string;
     onClickSearch: () => void;
@@ -23,7 +21,7 @@ export const SearchBox = ({searchProduct, onClickSearch, onSearchProductChange}:
                 <input
                     type="text"
                     placeholder="Nunca dejes de buscar"
-                    style={{width: '100%'}}
+                    className="searchBoxInput"
                     onChange={onSearchProductChange}
                     value={searchProduct}
                     onKeyDown={handleKeyDown}
