@@ -22,6 +22,9 @@ export const ItemDetailView = ({item, breadcrumb, searchProduct, onSearchClick, 
                         <div className="condition">{item.condition} - {item.sold_quantity} vendidos</div>
                         <div className="title">{item.title}</div>
                         <div className="amount">{formatPrice(item.price)}</div>
+                        <div className="buttonContainer">
+                            <button className="btnBuy">Comprar</button>
+                        </div>
                     </div>
                 </div>
                 <div className="descriptionContainer">
