@@ -132,6 +132,10 @@
     height: auto;
 }
 
+.productInfoContainer {
+    margin-left: calc($xxxl / 5);
+}
+
 .condition {
     margin-top: $m-l;
     font-size: $xs;

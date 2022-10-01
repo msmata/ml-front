@@ -18,7 +18,7 @@ export const ItemDetailView = ({item, breadcrumb, searchProduct, onSearchClick, 
             <CategoryWrapper breadcrumb={breadcrumb}>
                 <div className="productDetailContainer">
                     <img src={item.picture} className="imageProductDetail" alt="imagen del producto" />
-                    <div>
+                    <div className="productInfoContainer">
                         <div className="condition">{item.condition} - {item.sold_quantity} vendidos</div>
                         <div className="title">{item.title}</div>
                         <div className="amount">{formatPrice(item.price)}</div>
